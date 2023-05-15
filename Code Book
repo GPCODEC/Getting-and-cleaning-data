@@ -1,0 +1,24 @@
+Code Book
+
+the dataset is a UCI HAR Dataset downloaded from the Getting and Cleaning data peer graded assignment by John Hopkins University
+The working space was cleared and the dplyr package was loaded into the workspace
+The UCI HAR consist of subject data, training data and test data which was merged into one dataset using the rbind and cbind function called "full_data" 
+The combined dataset "full_data" originally consists of 563 variables and over 10,0000 observations
+Variable measurements for the mean and standard deviation were extracted to create a new data set with 88 variables called "extracted_data" using the select function in the dplyr package
+The variable names for the extracted_data were modified as follows:
+
+The code variable in the original data set was renamed to activity
+"Acc" was replaced with its full name accelerometer
+"Gyro" was named to Gyroscope
+"BodyBody" was modified to Body
+mag modified to magnitude
+"t" at the beginning of every variable name was modified to Time
+"f" renamed to frequency
+"meanfreq" renamed to meanfrequency
+"tbody" changed to time body
+"angle" changed to "Angle"
+The dots in the variable names was replaced with underscore
+multiple underscores were replaced with just a single underscore.
+periods at the end of variable names were removed
+
+A new data set called "summarised_data" was created that grouped and summarised the the data by subjects and activities. 
